@@ -22,9 +22,9 @@ class PersonAdapter(private val context: Context, private val people: MutableLis
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private val ivImage = itemView.findViewById<ImageView>(R.id.ivImage)
         val ivDelete = itemView.findViewById<ImageView>(R.id.ivDelete)
-        private val tvTitle = itemView.findViewById<TextView>(R.id.tvTitle)
+        private val tvFullName = itemView.findViewById<TextView>(R.id.tvFullName)
         fun bind(person: Person) {
-            tvTitle.text = person.toString()
+            tvFullName.text = person.toString()
             Picasso.get()
                 .load(File(person.picturePath))
                 .error(R.mipmap.ic_launcher)

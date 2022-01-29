@@ -93,6 +93,7 @@ class EditFragment : Fragment() {
         binding.tvDate.text = person.birthDate.format(DateTimeFormatter.ISO_DATE)
         binding.etFirstName.setText(person.firstName ?: "")
         binding.etLastName.setText(person.lastName ?: "")
+        binding.etTitle.setText(person.title?:"")
     }
 
     private fun setupListeners() {
@@ -128,6 +129,17 @@ class EditFragment : Fragment() {
 
             override fun onTextChanged(text: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 person.lastName = text?.toString()?.trim()
+            }
+        })
+        binding.etTitle.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(text: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                person.title = text?.toString()?.trim()
             }
         })
     }

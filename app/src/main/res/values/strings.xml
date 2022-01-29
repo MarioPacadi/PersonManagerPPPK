@@ -14,4 +14,8 @@
     <string name="last_name">Last name</string>
     <string name="commit">Commit</string>
     <string name="please_insert_value">Please insert value</string>
+    <string name="title">Title</string>
+    <string name="last_name_placeholder">me Diro</string>
+    <string name="first_name_placeholder">Robert</string>
+    <string name="title_placeholder">empty</string>
 </resources>
